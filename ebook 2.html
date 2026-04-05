@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ebook 2 - Dunia Karya Mbak</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+}
+
+/* COVER */
+.cover {
+  text-align:center;
+  padding:60px;
+  background: linear-gradient(135deg, purple, pink);
+  color:white;
+}
+
+/* BUTTON */
+.btn {
+  background:white;
+  color:purple;
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* BOOK */
+.book {
+  display:none;
+  padding:20px;
+}
+
+.page {
+  display:none;
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:20px;
+  animation: slide 0.5s;
+}
+
+@keyframes slide {
+  from {transform:translateX(80px); opacity:0;}
+  to {transform:translateX(0); opacity:1;}
+}
+
+/* COMMENT */
+input, textarea {
+  width:100%;
+  margin-top:10px;
+  padding:8px;
+  border-radius:8px;
+}
+
+.comment {
+  background:#eee;
+  margin-top:10px;
+  padding:8px;
+  border-radius:8px;
+}
+
+.like { cursor:pointer; color:red; }
+
+/* VIEWER */
+.viewer {
+  text-align:center;
+  margin-top:10px;
+  font-size:14px;
+  color:#555;
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="sound">
+  <source src="https://www.soundjay.com/misc/sounds/page-flip-01a.mp3">
+</audio>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <h1>📘 Ebook 2</h1>
+  <h2>Rahasia Jualan Anak Sekolah Biar Cepat Laku ⭐</h2>
+  <p>Karya Mbak Rafiiqah Zayyan Fatimah</p>
+
+  <div class="viewer" id="viewerText">👀 Dibaca: 0 orang</div>
+
+  <button class="btn" onclick="start()">📖 Buka Buku</button>
+</div>
+
+<!-- BOOK -->
+<div class="book" id="book">
+
+<!-- PAGE 1 -->
+<div class="page">
+<h2>✍️ KATA PENGANTAR</h2>
+
+<p>Halo 😊</p>
+
+<p>Ini adalah ebook keduaku tentang belajar jualan.</p>
+
+<p>Di ebook pertama, aku sudah belajar tentang 50 ide jualan dari rumah.</p>
+
+<p>Sekarang, di ebook ini aku ingin belajar hal yang lebih penting, yaitu bagaimana cara supaya jualan bisa cepat laku.</p>
+
+<p>Sebagai anak sekolah, kita juga bisa mulai belajar jualan dari kecil. Walaupun masih sederhana, tapi ini bisa jadi latihan untuk masa depan.</p>
+
+<p>Semoga ebook ini bisa membantu aku untuk lebih berani mencoba jualan dan belajar menjadi pebisnis kecil.</p>
+
+<p>— Rafiiqah Zayyan Fatimah × ChatGPT</p>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+<h2>📖 BAB 1 — KENAPA ANAK SEKOLAH BISA JUALAN</h2>
+
+<p>Banyak orang berpikir kalau jualan hanya untuk orang dewasa.</p>
+
+<p>Padahal, anak sekolah juga bisa mulai belajar jualan.</p>
+
+<p>💡 1. Jualan Itu Tidak Perlu Umur</p>
+<p>Yang penting: Mau belajar, mau mencoba.</p>
+
+<p>🏠 2. Bisa Dilakukan dari Rumah</p>
+<p>Bisa jualan ke teman, keluarga, dan lingkungan sekitar.</p>
+
+<p>🎯 3. Bisa Jadi Latihan Masa Depan</p>
+<p>Belajar uang, tanggung jawab, dan keberanian.</p>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+<h2>📖 BAB 2 — CARA MULAI JUALAN</h2>
+
+<p>🪙 Mulai dari modal kecil</p>
+<p>🍟 Pilih jualan yang mudah</p>
+<p>👭 Jual ke teman dulu</p>
+<p>🔁 Coba dulu, baru belajar</p>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+<h2>📖 BAB 3 — CARA BIAR LAKU ⭐</h2>
+
+<p>🎯 Pilih yang banyak dicari</p>
+<p>💰 Harga harus pas</p>
+<p>👀 Tampilan menarik</p>
+<p>⏰ Waktu jualan tepat</p>
+<p>😋 Rasa harus enak</p>
+<p>📢 Harus ditawarkan</p>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+<h2>📖 BAB 4 — PROMOSI</h2>
+
+<p>💬 Cara ngomong ke pembeli</p>
+<p>📱 Pakai WhatsApp</p>
+<p>😊 Harus ramah</p>
+<p>🔁 Follow up</p>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+<h2>📖 BAB 5 — KESALAHAN</h2>
+
+<p>❌ Takut mulai</p>
+<p>❌ Malu jualan</p>
+<p>❌ Tidak promosi</p>
+<p>❌ Mudah menyerah</p>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+<h2>📖 BAB 6 — RANGKUMAN</h2>
+
+<p>✔ Anak sekolah bisa jualan</p>
+<p>✔ Mulai dari kecil</p>
+<p>✔ Promosi penting</p>
+<p>✔ Jangan takut gagal</p>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+<h2>📖 PENUTUP</h2>
+
+<p>Ebook ini adalah lanjutan dari ebook pertama.</p>
+
+<p>Dengan belajar dari kecil, kita bisa jadi lebih berani dan siap masa depan.</p>
+
+<p>Terima kasih 😊</p>
+</div>
+
+<!-- NAV -->
+<button onclick="prev()">⬅️</button>
+<button onclick="next()">➡️</button>
+
+<!-- COMMENT -->
+<h3>💬 Komentar</h3>
+<input id="nama" placeholder="Nama">
+<textarea id="komentar"></textarea>
+<button onclick="kirim()">Kirim</button>
+
+<div id="listKomentar"></div>
+
+</div>
+
+<script>
+let pages = document.querySelectorAll(".page");
+let index = 0;
+
+/* VIEWER COUNT */
+let view = localStorage.getItem("viewer2");
+if(!view){
+  view = 0;
+}
+view++;
+localStorage.setItem("viewer2", view);
+document.getElementById("viewerText").innerText = "👀 Dibaca: " + view + " orang";
+
+function showPage(i){
+  pages.forEach(p=>p.style.display="none");
+  pages[i].style.display="block";
+  localStorage.setItem("page2", i);
+}
+
+function start(){
+  document.getElementById("cover").style.display="none";
+  document.getElementById("book").style.display="block";
+  document.getElementById("sound").play();
+
+  let last = localStorage.getItem("page2");
+  index = last ? parseInt(last) : 0;
+  showPage(index);
+}
+
+function next(){
+  if(index < pages.length-1){
+    index++;
+    document.getElementById("sound").play();
+    showPage(index);
+  }
+}
+
+function prev(){
+  if(index > 0){
+    index--;
+    document.getElementById("sound").play();
+    showPage(index);
+  }
+}
+
+/* KOMENTAR */
+function kirim(){
+  let nama = document.getElementById("nama").value;
+  let isi = document.getElementById("komentar").value;
+
+  let data = JSON.parse(localStorage.getItem("komen2")||"[]");
+  data.push({nama, isi, like:0});
+  localStorage.setItem("komen2", JSON.stringify(data));
+  tampil();
+}
+
+function tampil(){
+  let data = JSON.parse(localStorage.getItem("komen2")||"[]");
+  let div = document.getElementById("listKomentar");
+  div.innerHTML="";
+
+  data.forEach((k,i)=>{
+    div.innerHTML += `
+    <div class="comment">
+    <b>${k.nama}</b>: ${k.isi}
+    <br>
+    <span class="like" onclick="like(${i})">❤️ ${k.like}</span>
+    </div>`;
+  });
+}
+
+function like(i){
+  let data = JSON.parse(localStorage.getItem("komen2"));
+  data[i].like++;
+  localStorage.setItem("komen2", JSON.stringify(data));
+  tampil();
+}
+
+tampil();
+</script>
+
+</body>
+</html>
