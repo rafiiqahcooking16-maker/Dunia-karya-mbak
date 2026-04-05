@@ -1,106 +1,271 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Buku Besar Mbak 💜</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku Besar Mbak 💜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: linear-gradient(to bottom, #e6ccff, #ffffff);
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      transition: 0.3s;
+      background: linear-gradient(to bottom, #d3d5f5, #ffffff);
+    }
 
-/* HEADER */
-header {
-  background: linear-gradient(to right, purple, violet);
-  color: white;
-  text-align: center;
-  padding: 25px;
-  font-size: 22px;
-  font-weight: bold;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
+    .dark {
+      background: #1e1e2f;
+      color: white;
+    }
 
-/* CONTAINER */
-.container {
-  padding: 20px;
-}
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      color: purple;
+      animation: fadeIn 1s ease;
+    }
 
-/* BOX UTAMA */
-.box {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
+    .container {
+      padding: 20px;
+    }
 
-/* JUDUL */
-h1 {
-  color: purple;
-}
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      animation: fadeUp 0.8s ease;
+    }
 
-/* LINK EBOOK */
-.ebook-link {
-  display: block;
-  margin-top: 15px;
-  font-size: 18px;
-  text-decoration: none;
-  color: purple;
-  font-weight: bold;
-}
+    .dark .box {
+      background: #2c2c3c;
+    }
 
-.ebook-link:hover {
-  color: violet;
-}
+    .ebook {
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 15px;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
 
-/* DESKRIPSI */
-.desc {
-  margin-left: 5px;
-  margin-bottom: 10px;
-  color: #555;
-}
-</style>
+    .ebook:hover {
+      transform: scale(1.03);
+    }
 
+    .title {
+      font-weight: bold;
+      color: purple;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: linear-gradient(45deg, purple, violet);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    .comment-box {
+      margin-top: 10px;
+      background: #f3e5f5;
+      padding: 10px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .hapus {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      cursor: pointer;
+      color: red;
+    }
+
+    .top-bar {
+      text-align: right;
+      padding: 10px 20px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0}
+      to {opacity:1}
+    }
+
+    @keyframes fadeUp {
+      from {opacity:0; transform:translateY(20px)}
+      to {opacity:1; transform:translateY(0)}
+    }
+  </style>
 </head>
 
 <body>
 
+<div class="top-bar">
+  <button class="btn" onclick="toggleDark()">🌙 Mode</button>
+</div>
+
 <header>
-📘 Buku Besar Bisnis Cilik 💜
+  <h1>🌟📚💜 Dunia Karya Mbak ✨</h1>
+  <p>Kumpulan ebook keren Mbak 💜</p>
 </header>
 
 <div class="container">
 
-<div class="box">
-<h1>📘 Buku Besar Bisnis Cilik 💜</h1>
+  <div class="box">
+    <h2>📘 Buku Besar Bisnis Cilik</h2>
+    <p>Belajar jualan dari nol sampai sukses 🚀</p>
 
-<p>Halo 😊 Buku ini adalah kumpulan 5 ebook karya Mbak untuk belajar jualan dari nol sampai sukses.</p>
+    <input type="text" id="search" placeholder="Cari ebook..." onkeyup="cariEbook()">
 
-<p>Semoga buku ini bisa membantu Mbak untuk terus belajar dan berkembang 💜</p>
+    <!-- EBOOK 1 -->
+    <div class="ebook">
+      <div class="title">📘 Ebook 1 – 50 Ide Jualan</div>
+      ❤️ <span id="like1">0</span> | 👀 <span id="view1">0</span><br>
+      <button class="btn" onclick="likeEbook(1)">Like</button>
+      <a href="ebook1.html" class="btn" onclick="tambahView(1)">Baca</a>
+    </div>
 
-<h2>📚 Daftar Ebook</h2>
+    <!-- EBOOK 2 -->
+    <div class="ebook">
+      <div class="title">📘 Ebook 2 – Cara Biar Laku</div>
+      ❤️ <span id="like2">0</span> | 👀 <span id="view2">0</span><br>
+      <button class="btn" onclick="likeEbook(2)">Like</button>
+      <a href="ebook2.html" class="btn" onclick="tambahView(2)">Baca</a>
+    </div>
 
-<a href="ebook1.html" class="ebook-link">📘 Ebook 1 — 50 Ide Jualan</a>
-<div class="desc">Berisi 50 ide jualan dari rumah dengan modal kecil.</div>
+    <!-- EBOOK 3 -->
+    <div class="ebook">
+      <div class="title">📘 Ebook 3 – Ngatur Uang</div>
+      ❤️ <span id="like3">0</span> | 👀 <span id="view3">0</span><br>
+      <button class="btn" onclick="likeEbook(3)">Like</button>
+      <a href="ebook3.html" class="btn" onclick="tambahView(3)">Baca</a>
+    </div>
 
-<a href="ebook2.html" class="ebook-link">📘 Ebook 2 — Cara Biar Laku</a>
-<div class="desc">Cara supaya jualan cepat laku dan banyak pembeli.</div>
+    <!-- EBOOK 4 -->
+    <div class="ebook">
+      <div class="title">📘 Ebook 4 – Branding</div>
+      ❤️ <span id="like4">0</span> | 👀 <span id="view4">0</span><br>
+      <button class="btn" onclick="likeEbook(4)">Like</button>
+      <a href="ebook4.html" class="btn" onclick="tambahView(4)">Baca</a>
+    </div>
 
-<a href="ebook3.html" class="ebook-link">📘 Ebook 3 — Ngatur Uang</a>
-<div class="desc">Belajar mengatur uang dan menabung dari hasil jualan.</div>
+    <!-- EBOOK 5 -->
+    <div class="ebook">
+      <div class="title">📘 Ebook 5 – Level Sultan</div>
+      ❤️ <span id="like5">0</span> | 👀 <span id="view5">0</span><br>
+      <button class="btn" onclick="likeEbook(5)">Like</button>
+      <a href="ebook5.html" class="btn" onclick="tambahView(5)">Baca</a>
+    </div>
 
-<a href="ebook4.html" class="ebook-link">📘 Ebook 4 — Branding</a>
-<div class="desc">Belajar bikin jualan lebih menarik dan beda.</div>
+  </div>
 
-<a href="ebook5.html" class="ebook-link">📘 Ebook 5 — Level Sultan</a>
-<div class="desc">Belajar mengembangkan usaha jadi lebih besar.</div>
+  <!-- KOMENTAR -->
+  <div class="box">
+    <h3>💬 Komentar (<span id="jumlah"></span>)</h3>
+    <textarea id="komen" placeholder="Tulis komentar..."></textarea>
+    <button onclick="kirimKomen()" class="btn">Kirim</button>
+
+    <div id="hasilKomentar"></div>
+  </div>
 
 </div>
 
-</div>
+<script>
+function cariEbook() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let ebooks = document.getElementsByClassName("ebook");
+
+  for (let i = 0; i < ebooks.length; i++) {
+    let text = ebooks[i].innerText.toLowerCase();
+    ebooks[i].style.display = text.includes(input) ? "block" : "none";
+  }
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+function likeEbook(id) {
+  let data = JSON.parse(localStorage.getItem("like")) || {};
+  data[id] = (data[id] || 0) + 1;
+  localStorage.setItem("like", JSON.stringify(data));
+  tampilStat();
+}
+
+function tambahView(id) {
+  let data = JSON.parse(localStorage.getItem("view")) || {};
+  data[id] = (data[id] || 0) + 1;
+  localStorage.setItem("view", JSON.stringify(data));
+}
+
+function tampilStat() {
+  let like = JSON.parse(localStorage.getItem("like")) || {};
+  let view = JSON.parse(localStorage.getItem("view")) || {};
+
+  for (let i = 1; i <= 5; i++) {
+    let l = document.getElementById("like" + i);
+    let v = document.getElementById("view" + i);
+
+    if (l) l.innerText = like[i] || 0;
+    if (v) v.innerText = view[i] || 0;
+  }
+}
+
+function kirimKomen() {
+  let isi = document.getElementById("komen").value;
+  if (isi == "") return;
+
+  let data = JSON.parse(localStorage.getItem("komen")) || [];
+  data.push(isi);
+  localStorage.setItem("komen", JSON.stringify(data));
+
+  tampilKomen();
+  document.getElementById("komen").value = "";
+}
+
+function tampilKomen() {
+  let data = JSON.parse(localStorage.getItem("komen")) || [];
+  let tempat = document.getElementById("hasilKomentar");
+  tempat.innerHTML = "";
+
+  document.getElementById("jumlah").innerText = data.length;
+
+  data.forEach((isi, index) => {
+    let div = document.createElement("div");
+    div.className = "comment-box";
+    div.innerHTML = isi + `<span class="hapus" onclick="hapus(${index})">❌</span>`;
+    tempat.appendChild(div);
+  });
+}
+
+function hapus(i) {
+  let data = JSON.parse(localStorage.getItem("komen"));
+  data.splice(i,1);
+  localStorage.setItem("komen", JSON.stringify(data));
+  tampilKomen();
+}
+
+tampilKomen();
+tampilStat();
+</script>
 
 </body>
 </html>
