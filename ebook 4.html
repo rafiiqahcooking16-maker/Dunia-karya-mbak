@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ebook 4 – Branding 💜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(to bottom, #e1bee7, #ffffff);
+    }
+
+    .container {
+      padding: 20px;
+      animation: bukaBuku 1s ease;
+    }
+
+    @keyframes bukaBuku {
+      from { transform: scale(0.9) rotateY(20deg); opacity: 0; }
+      to { transform: scale(1) rotateY(0); opacity: 1; }
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #ce93d8, #ab47bc);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      margin: 20px 0;
+    }
+
+    .btn, .like-btn {
+      background: purple;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .comment {
+      background: #f3e5f5;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .bookmark {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      background: purple;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body onload="playSound(); tampilkanKomentar(); loadNama(); loadBookmark();">
+
+<audio id="sound" src="https://www.soundjay.com/misc/sounds/page-turn-01.mp3"></audio>
+
+<div class="cover">
+  <h1>📘 Ebook 4 – Branding 💜</h1>
+  <p>Karya Mbak ✨</p>
+</div>
+
+<div class="container">
+
+<div class="box">
+<h2>👤 Login Nama</h2>
+<input type="text" id="namaUser">
+<button class="btn" onclick="login()">Masuk</button>
+<p id="halo"></p>
+</div>
+
+<div class="box">
+
+<h1>📘 JUDUL EBOOK 4
+“Rahasia Jualan Biar Menonjol: Cara Jadi Pebisnis Kecil yang Beda dari yang Lain” ⭐</h1>
+
+<p>Rafiiqah Zayyan Fatimah × ChatGPT</p>
+
+<h2>📚 STRUKTUR EBOOK 4</h2>
+<p>
+BAB 1 — Kenapa Harus Beda dari yang Lain<br>
+BAB 2 — Cara Membuat Jualan Lebih Menarik<br>
+BAB 3 — Branding Sederhana untuk Anak Sekolah ⭐<br>
+BAB 4 — Cara Bikin Pembeli Balik Lagi<br>
+BAB 5 — Cara Jadi Lebih Percaya Diri Jualan<br>
+BAB 6 — Rangkuman<br>
+Penutup
+</p>
+
+<h2>✍️ KATA PENGANTAR</h2>
+<p>
+Halo 😊  
+Ini adalah ebook keempatku tentang belajar jualan.  
+Di ebook sebelumnya, aku sudah belajar tentang ide jualan, cara supaya laku, dan cara mengatur uang.  
+Sekarang, di ebook ini aku ingin belajar bagaimana cara membuat jualanku berbeda dari yang lain supaya lebih menarik dan lebih disukai pembeli.  
+Semoga ebook ini bisa membantu aku menjadi pebisnis kecil yang lebih kreatif dan percaya diri.  
+—
+Rafiiqah Zayyan Fatimah × ChatGPT
+</p>
+
+<h2>📖 BAB 1 — KENAPA HARUS BEDA DARI YANG LAIN</h2>
+<p>
+Kalau jualan sama semua orang, pembeli jadi bingung mau pilih siapa.  
+💡 Contoh:  
+Ada 2 penjual:  
+Sama-sama jual es teh  
+👉 Tapi satu lebih menarik  
+Pasti orang pilih yang menarik.  
+🎯 Jadi:  
+👉 Harus punya sesuatu yang beda  
+
+✨ Contoh nyata:  
+Ada dua penjual donat.  
+Yang satu biasa saja, yang satu pakai topping warna-warni dan nama lucu “Donat Pelangi Mbak”.  
+👉 Pembeli pasti lebih tertarik yang kedua.
+</p>
+
+<h2>📖 BAB 2 — CARA MEMBUAT JUALAN LEBIH MENARIK</h2>
+<p>
+🎨 1. Kemasan Lucu  
+🍓 2. Tambah Variasi  
+✨ 3. Nama Unik  
+👀 4. Tampilan Rapi  
+
+✨ Contoh:  
+Minuman es teh biasa → jadi “Es Teh Jumbo Fresh 💜” dengan cup lucu + stiker.  
+👉 Jadi lebih menarik dan beda dari yang lain.
+</p>
+
+<h2>📖 BAB 3 — BRANDING SEDERHANA UNTUK ANAK SEKOLAH ⭐</h2>
+<p>
+🏷️ 1. Punya Nama Jualan  
+🎨 2. Warna Ciri Khas  
+📦 3. Gaya yang Sama  
+
+🎯 Hasilnya:  
+👉 Jualan terlihat lebih profesional  
+
+✨ Contoh:  
+Semua produk Mbak pakai warna ungu + nama “Dunia Karya Mbak”.  
+👉 Orang langsung ingat jualan Mbak.
+</p>
+
+<h2>📖 BAB 4 — CARA BIKIN PEMBELI BALIK LAGI</h2>
+<p>
+😊 1. Ramah  
+🍴 2. Enak  
+⚡ 3. Cepat  
+🎁 4. Bonus kecil  
+
+✨ Contoh:  
+Pembeli beli 1 → dikasih bonus sedikit topping.  
+👉 Besok dia pasti balik lagi.
+</p>
+
+<h2>📖 BAB 5 — CARA JADI LEBIH PERCAYA DIRI JUALAN</h2>
+<p>
+💬 1. Latihan ngomong  
+👀 2. Tatap orang  
+😊 3. Senyum  
+🔁 4. Coba terus  
+❌ Jangan: Malu, Takut  
+
+✨ Contoh:  
+Latihan bilang:  
+“Halo, Mbak jual donat enak nih, mau coba?”  
+👉 Lama-lama jadi pede.
+</p>
+
+<h2>📖 BAB 6 — RANGKUMAN</h2>
+<p>
+✔ Jualan harus beda  
+✔ Tampilan penting  
+✔ Branding bikin keren  
+✔ Pembeli harus nyaman  
+✔ Percaya diri itu penting  
+
+✨ Contoh inti:  
+Kalau jualan biasa → susah laku  
+Kalau beda & menarik → cepat laku 💜
+</p>
+
+<h2>📖 PENUTUP</h2>
+<p>
+Ebook ini adalah lanjutan dari ebook sebelumnya.  
+Di ebook ini, aku belajar bahwa jualan bukan hanya tentang produk, tetapi juga tentang bagaimana membuat jualan menjadi menarik dan berbeda dari yang lain.  
+Dengan belajar ini, aku bisa menjadi lebih kreatif dan percaya diri.  
+Semoga ebook ini bisa membantu aku untuk terus berkembang menjadi pebisnis kecil yang lebih baik.  
+Terima kasih 😊  
+✍️ Rafiiqah Zayyan Fatimah × ChatGPT
+</p>
+
+</div>
+
+<div class="box">
+<h2>💬 Komentar</h2>
+<textarea id="komen"></textarea>
+<button class="btn" onclick="kirim()">Kirim</button>
+<div id="listKomen"></div>
+</div>
+
+</div>
+
+<div class="bookmark" onclick="bookmark()">🔖</div>
+
+<script>
+function playSound(){document.getElementById("sound").play();}
+
+function login(){
+let nama=document.getElementById("namaUser").value;
+localStorage.setItem("nama",nama);
+document.getElementById("halo").innerText="Halo "+nama;
+}
+
+function loadNama(){
+let nama=localStorage.getItem("nama");
+if(nama){document.getElementById("halo").innerText="Halo "+nama;}
+}
+
+function kirim(){
+let nama=localStorage.getItem("nama")||"Anonim";
+let isi=document.getElementById("komen").value;
+let data=JSON.parse(localStorage.getItem("komentar"))||[];
+
+data.push({teks:nama+": "+isi,like:0});
+localStorage.setItem("komentar",JSON.stringify(data));
+tampilkanKomentar();
+}
+
+function tampilkanKomentar(){
+let list=document.getElementById("listKomen");
+list.innerHTML="";
+let data=JSON.parse(localStorage.getItem("komentar"))||[];
+
+data.forEach(function(item,i){
+let div=document.createElement("div");
+div.className="comment";
+
+let teks=document.createElement("div");
+teks.innerText=item.teks;
+
+let like=document.createElement("button");
+like.className="like-btn";
+like.innerText="❤️ "+item.like;
+
+like.onclick=function(){
+data[i].like++;
+localStorage.setItem("komentar",JSON.stringify(data));
+tampilkanKomentar();
+};
+
+div.appendChild(teks);
+div.appendChild(like);
+list.appendChild(div);
+});
+}
+
+function bookmark(){
+localStorage.setItem("bookmark",window.scrollY);
+alert("Disimpan!");
+}
+
+function loadBookmark(){
+let pos=localStorage.getItem("bookmark");
+if(pos){window.scrollTo(0,pos);}
+}
+</script>
+
+</body>
+</html>
