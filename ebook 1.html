@@ -1,120 +1,275 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ebook 1 — Dunia Karya Mbak</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebook 1 Super Lengkap 💜</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(to bottom, #f3d5f5, #ffffff);
-      padding: 15px;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#d1c4e9;
+}
 
-    .book {
-      background: white;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      line-height: 1.6;
-    }
+/* COVER */
+.cover{
+  height:100vh;
+  background:linear-gradient(purple,violet);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
 
-    h1 {
-      color: purple;
-      text-align: center;
-    }
+/* BUTTON */
+.btn{
+  background:white;
+  color:purple;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  margin-top:10px;
+}
 
-    h2 {
-      color: #6a1b9a;
-      margin-top: 25px;
-    }
+/* BOOK */
+.book{
+  display:none;
+  perspective:1500px;
+}
 
-    .back {
-      display: block;
-      text-align: center;
-      margin-top: 20px;
-      text-decoration: none;
-      color: purple;
-      font-weight: bold;
-    }
-  </style>
+.page{
+  width:90%;
+  max-width:500px;
+  height:500px;
+  background:white;
+  margin:auto;
+  padding:20px;
+  border-radius:15px;
+  position:absolute;
+  overflow:auto;
+  transform-origin:left;
+  transition:1s;
+}
+
+.flipped{
+  transform:rotateY(-180deg);
+}
+
+.controls{
+  text-align:center;
+  margin-top:520px;
+}
+
+.controls button{
+  padding:10px;
+  margin:5px;
+  background:purple;
+  color:white;
+  border:none;
+  border-radius:10px;
+}
+
+/* ITEM */
+.item{
+  background:#f3e5f5;
+  margin:5px;
+  padding:5px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+/* KOMENTAR */
+.komentar-box{
+  margin-top:20px;
+  background:#f3e5f5;
+  padding:10px;
+  border-radius:10px;
+}
+
+.nama{font-weight:bold;color:purple;}
+.like{color:red;cursor:pointer;}
+</style>
 </head>
 
 <body>
 
-<div class="book">
+<!-- COVER -->
+<div class="cover" id="cover">
+<h1>📘 Ebook 1</h1>
+<h2>50 Ide Jualan 💜</h2>
+<button class="btn" onclick="bukaBuku()">Buka Buku</button>
+</div>
 
-<h1>📘 Ebook 1 — 50 Ide Jualan 💜</h1>
+<!-- BOOK -->
+<div class="book" id="book">
 
-<h2>✍️ Kata Pengantar</h2>
+<div class="page" id="p1">
+<h2>Kata Pengantar</h2>
 <p>
-Halo 😊<br><br>
-Ebook ini aku buat untuk belajar sendiri di rumah tentang jualan.
-Aku ingin mencoba memahami bagaimana cara memulai usaha kecil, walaupun dengan modal yang tidak besar.<br><br>
-Di ebook ini, aku mengumpulkan berbagai ide jualan yang bisa dilakukan dari rumah dengan modal di bawah 500 ribu.
-Selain itu, aku juga belajar tentang cara mendapatkan keuntungan, cara menentukan harga, dan cara menjual produk dengan sederhana.<br><br>
-Ebook ini tidak dibuat untuk dijual, tetapi untuk aku baca sendiri dan juga bisa dibaca oleh keluarga.<br><br>
-Semoga dengan ebook ini, aku bisa mulai belajar menjadi pengusaha sejak kecil 💜
+Halo 😊 Ebook ini aku buat untuk belajar jualan dari rumah.
+Semoga bisa membantu belajar bisnis sejak kecil 💜
 </p>
+</div>
 
-<h2>📖 BAB 1 — Kenalan dengan Dunia Jualan</h2>
+<div class="page" id="p2">
+<h2>BAB 1</h2>
 <p>
-Jualan adalah kegiatan menjual barang atau jasa untuk mendapatkan uang.<br><br>
-Bisa jualan makanan, minuman, atau jasa.<br><br>
-Jualan bisa dilakukan siapa saja, termasuk anak sekolah.<br><br>
-Sekarang kita bisa jualan dari rumah, lewat WhatsApp, atau ke teman.<br><br>
-Mindset penting:
-Tidak takut mencoba, mau belajar, sabar, dan tidak mudah menyerah.
+Jualan adalah kegiatan menjual barang/jasa untuk mendapatkan uang.
+Bisa dilakukan siapa saja termasuk anak sekolah.
 </p>
+</div>
 
-<h2>📖 BAB 2 — Cara Mulai</h2>
+<div class="page" id="p3">
+<h2>BAB 2</h2>
 <p>
-Mulai dari modal kecil seperti 100rb atau 200rb.<br><br>
-Pilih jualan yang mudah dan banyak disukai.<br><br>
-Mulai dari keluarga, teman, dan tetangga.<br><br>
-Jangan takut gagal — coba lagi sampai bisa.
+Mulai dari modal kecil, pilih yang mudah, dan jangan takut gagal.
 </p>
+</div>
 
-<h2>📖 BAB 3 — Cara Dapat Untung</h2>
+<div class="page" id="p4">
+<h2>BAB 3</h2>
 <p>
-Untung = Harga jual - Modal<br><br>
-Tips:
-Jangan terlalu mahal atau murah, pilih bahan hemat, dan jual yang banyak dicari.
+Untung = harga jual - modal. Harus dihitung agar tidak rugi.
 </p>
+</div>
 
-<h2>📖 BAB 4 — Cara Promosi</h2>
+<div class="page" id="p5">
+<h2>BAB 4</h2>
 <p>
-Jual ke teman dan keluarga.<br><br>
-Gunakan WhatsApp untuk kirim foto dan harga.<br><br>
-Bersikap ramah, cepat, dan jujur.
+Promosi penting! Bisa lewat WhatsApp, teman, keluarga.
 </p>
+</div>
 
-<h2>📖 BAB 5 — 50 Ide Jualan</h2>
-<p>
-Contoh ide:
-Gorengan, es teh, donat, seblak, rice bowl, puding, jasuke, boba, cookies, dll.<br><br>
-Semua bisa dimulai dari modal kecil dan berkembang.
-</p>
+<!-- 50 IDE -->
+<div class="page" id="p6">
+<h2>50 Ide (1-25)</h2>
+<div class="item">1. Gorengan | 150rb | 1rb | 40rb</div>
+<div class="item">2. Es Teh | 100rb | 3rb | 60rb</div>
+<div class="item">3. Es Kopi | 300rb | 8rb | 100rb</div>
+<div class="item">4. Salad | 250rb | 10rb | 100rb</div>
+<div class="item">5. Seblak | 200rb | 10rb | 120rb</div>
+<div class="item">6. Mie Pedas | 200rb | 8rb | 100rb</div>
+<div class="item">7. Rice Bowl | 400rb | 12rb | 120rb</div>
+<div class="item">8. Kue | 200rb | 2rb | 80rb</div>
+<div class="item">9. Donat | 200rb | 2.5rb | 80rb</div>
+<div class="item">10. Pisang | 150rb | 3rb | 60rb</div>
+<div class="item">11. Cireng | 150rb | 2rb | 70rb</div>
+<div class="item">12. Sosis | 200rb | 5rb | 80rb</div>
+<div class="item">13. Jasuke | 150rb | 5rb | 60rb</div>
+<div class="item">14. Es Buah | 250rb | 8rb | 100rb</div>
+<div class="item">15. Puding | 150rb | 5rb | 70rb</div>
+<div class="item">16. Keripik | 200rb | 10rb | 80rb</div>
+<div class="item">17. Basreng | 200rb | 10rb | 90rb</div>
+<div class="item">18. Makaroni | 200rb | 10rb | 80rb</div>
+<div class="item">19. Seblak Kering | 150rb | 8rb | 70rb</div>
+<div class="item">20. Snack | 150rb | 5rb | 60rb</div>
+<div class="item">21. Popcorn | 100rb | 5rb | 50rb</div>
+<div class="item">22. Kacang | 150rb | 10rb | 60rb</div>
+<div class="item">23. Stik | 150rb | 10rb | 70rb</div>
+<div class="item">24. Kerupuk | 150rb | 8rb | 60rb</div>
+<div class="item">25. Cookies | 200rb | 10rb | 80rb</div>
+</div>
 
-<h2>📖 BAB 6 — Rangkuman</h2>
-<p>
-✔ Mulai dari kecil<br>
-✔ Banyak ide = banyak peluang<br>
-✔ Promosi itu penting<br>
-✔ Jangan takut gagal
-</p>
+<div class="page" id="p7">
+<h2>50 Ide (26-50)</h2>
+<div class="item">26. Es Cincau | 100rb | 5rb | 50rb</div>
+<div class="item">27. Jelly | 120rb | 5rb | 60rb</div>
+<div class="item">28. Thai Tea | 200rb | 8rb | 80rb</div>
+<div class="item">29. Boba | 250rb | 10rb | 100rb</div>
+<div class="item">30. Yakult | 200rb | 8rb | 80rb</div>
+<div class="item">31. Desain | 0 | 10rb | 50rb</div>
+<div class="item">32. Ketik | 0 | 5rb | 40rb</div>
+<div class="item">33. Edit | 0 | 10rb | 50rb</div>
+<div class="item">34. Admin | 0 | 70rb</div>
+<div class="item">35. Jastip | 100rb | 80rb</div>
+<div class="item">36. Pulsa | 200rb | 50rb</div>
+<div class="item">37. Reseller | 200rb | 100rb</div>
+<div class="item">38. Dropship | 0 | 80rb</div>
+<div class="item">39. Affiliate | 0 | 70rb</div>
+<div class="item">40. Akun | 100rb | 60rb</div>
+<div class="item">41. Gelang | 100rb | 5rb | 40rb</div>
+<div class="item">42. Scrunchie | 150rb | 8rb | 50rb</div>
+<div class="item">43. Buket | 200rb | 20rb | 80rb</div>
+<div class="item">44. Bunga | 200rb | 25rb | 80rb</div>
+<div class="item">45. Pensil | 100rb | 10rb | 40rb</div>
+<div class="item">46. Hiasan | 150rb | 15rb | 50rb</div>
+<div class="item">47. Hijab | 300rb | 25rb | 100rb</div>
+<div class="item">48. Kaos | 400rb | 50rb | 100rb</div>
+<div class="item">49. Tanaman | 200rb | 15rb | 60rb</div>
+<div class="item">50. Preloved | 200rb | 80rb</div>
 
-<h2>📖 Penutup</h2>
-<p>
-Ebook ini dibuat untuk belajar sendiri di rumah.<br><br>
-Semoga bisa membantu memahami cara memulai jualan dari nol.<br><br>
-Terima kasih sudah membaca 😊💜
-</p>
-
-<a href="bukubesar.html" class="back">⬅ Kembali ke Buku Besar</a>
+<!-- KOMENTAR -->
+<div class="komentar-box">
+<h3>Komentar 💬</h3>
+<input id="nama" placeholder="Nama">
+<textarea id="input"></textarea>
+<button onclick="kirim()">Kirim</button>
+<div id="list"></div>
+</div>
 
 </div>
+
+</div>
+
+<div class="controls">
+<button onclick="prev()">⬅</button>
+<button onclick="next()">➡</button>
+</div>
+
+<audio id="sound" src="https://www.soundjay.com/page-flip-01.mp3"></audio>
+
+<script>
+let current=1,total=7;
+
+/* buka */
+function bukaBuku(){
+cover.style.display="none";
+book.style.display="block";
+load();
+}
+
+/* halaman */
+function next(){
+if(current<total){
+document.getElementById("p"+current).classList.add("flipped");
+current++;sound();
+}
+}
+function prev(){
+if(current>1){
+current--;
+document.getElementById("p"+current).classList.remove("flipped");
+sound();
+}
+}
+function sound(){document.getElementById("sound").play();}
+
+/* komentar */
+function load(){
+let data=JSON.parse(localStorage.getItem("komen")||"[]");
+list.innerHTML="";
+data.forEach((k,i)=>{
+let d=document.createElement("div");
+d.innerHTML=`<b>${k.nama}</b><br>${k.text}<br><span onclick="like(${i})">❤️ ${k.like}</span>`;
+list.appendChild(d);
+});
+}
+
+function kirim(){
+let data=JSON.parse(localStorage.getItem("komen")||"[]");
+data.push({nama:nama.value,text:input.value,like:0});
+localStorage.setItem("komen",JSON.stringify(data));
+load();
+}
+
+function like(i){
+let data=JSON.parse(localStorage.getItem("komen"));
+data[i].like++;
+localStorage.setItem("komen",JSON.stringify(data));
+load();
+}
+</script>
 
 </body>
 </html>
