@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ebook 5 Level Sultan 💜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      color: white;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      margin: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: slideUp 0.5s ease;
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(20px); opacity:0;}
+      to {transform: translateY(0); opacity:1;}
+    }
+
+    h2 {
+      color: purple;
+    }
+
+    button {
+      background: purple;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .comment {
+      background: #f3e5f5;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>💜 Ebook 5 Level Sultan 💜</h1>
+</header>
+
+<div class="cover">
+  <h2>✨ Naik Level Jadi Sultan 💰✨</h2>
+  <p>Belajar mengembangkan usaha jadi besar 🚀</p>
+</div>
+
+<div class="container">
+
+  <!-- LOGIN -->
+  <div class="box">
+    <h2>👤 Login Nama</h2>
+    <input type="text" id="nama" placeholder="Masukkan nama kamu">
+    <button onclick="login()">Simpan Nama</button>
+    <p id="halo"></p>
+  </div>
+
+  <!-- LIKE -->
+  <div class="box">
+    <h2>❤️ Like Ebook</h2>
+    <button onclick="like()">❤️ Like</button>
+    <p id="jumlahLike">0 Likes</p>
+  </div>
+
+  <!-- BOOKMARK -->
+  <div class="box">
+    <h2>🔖 Bookmark</h2>
+    <button onclick="bookmark()">Simpan Bookmark</button>
+    <p id="statusBookmark"></p>
+  </div>
+
+  <!-- ISI LENGKAP -->
+  <div class="box">
+    <h2>✍️ Kata Pengantar</h2>
+    <p>Halo 😊</p>
+    <p>Ebook ini aku buat untuk belajar bagaimana cara mengembangkan usaha kecil menjadi usaha yang lebih besar.</p>
+    <p>Setelah belajar dari Ebook 1 sampai 4, sekarang saatnya naik level menjadi “Level Sultan” 💰✨</p>
+    <p>Di ebook ini aku belajar tentang cara meningkatkan usaha, menambah modal, memperluas promosi, dan membuat usaha menjadi lebih profesional.</p>
+    <p>Semoga ebook ini bisa membantu aku menjadi pebisnis sukses sejak kecil 🚀</p>
+  </div>
+
+  <div class="box">
+    <h2>📖 BAB 1 — NAIK LEVEL USAHA</h2>
+    <p>Kalau usaha sudah mulai laku, jangan berhenti di situ.</p>
+    <p>Kita harus mulai berpikir untuk naik level.</p>
+    <ul>
+      <li>Tambah jumlah produksi</li>
+      <li>Tambah variasi menu</li>
+      <li>Tingkatkan kualitas rasa</li>
+      <li>Perbaiki pelayanan</li>
+    </ul>
+    <p>Contoh: Kalau sebelumnya jual 10, coba jadi 20.</p>
+  </div>
+
+  <div class="box">
+    <h2>📖 BAB 2 — MENAMBAH MODAL</h2>
+    <p>Modal sangat penting untuk berkembang.</p>
+    <p>Tapi kita tidak harus langsung punya banyak uang.</p>
+    <ul>
+      <li>Dari keuntungan jualan</li>
+      <li>Dari tabungan</li>
+      <li>Dari hasil usaha sebelumnya</li>
+    </ul>
+    <p>Ingat: Jangan boros 😊</p>
+  </div>
+
+  <div class="box">
+    <h2>📖 BAB 3 — PROMOSI LEBIH LUAS</h2>
+    <p>Promosi harus ditingkatkan supaya usaha makin dikenal.</p>
+    <ul>
+      <li>WhatsApp</li>
+      <li>Status WA</li>
+      <li>Tawarkan ke teman</li>
+      <li>Keluarga</li>
+    </ul>
+    <p>Semakin banyak yang tahu, semakin besar peluang laku.</p>
+  </div>
+
+  <div class="box">
+    <h2>📖 BAB 4 — BRANDING LEVEL SULTAN</h2>
+    <p>Branding bikin usaha terlihat profesional.</p>
+    <ul>
+      <li>Punya nama usaha</li>
+      <li>Desain logo sederhana</li>
+      <li>Kemasan rapi dan menarik</li>
+      <li>Warna khas usaha</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>📖 BAB 5 — TARGET BESAR</h2>
+    <p>Supaya makin semangat, kita harus punya target.</p>
+    <ul>
+      <li>Untung harian</li>
+      <li>Untung mingguan</li>
+      <li>Untung bulanan</li>
+      <li>Pelanggan tetap</li>
+    </ul>
+    <p>Target membantu kita berkembang lebih cepat 🚀</p>
+  </div>
+
+  <div class="box">
+    <h2>🔥 KESIMPULAN BESAR</h2>
+    <ul>
+      <li>Usaha kecil bisa jadi besar</li>
+      <li>Kunci sukses: sabar & konsisten</li>
+      <li>Terus belajar dan mencoba</li>
+      <li>Jangan takut gagal</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>📖 PENUTUP</h2>
+    <p>Ebook ini dibuat untuk belajar sendiri di rumah.</p>
+    <p>Semoga bisa membantu memahami cara mengembangkan usaha dari kecil menjadi besar.</p>
+    <p>Terima kasih sudah membaca 😊</p>
+    <p>✍️ Rafiiqah Zayyan Fatimah × ChatGPT</p>
+  </div>
+
+  <!-- KOMENTAR -->
+  <div class="box">
+    <h2>💬 Komentar</h2>
+    <textarea id="komen" placeholder="Tulis komentar..."></textarea>
+    <button onclick="kirim()">Kirim</button>
+    <div id="listKomen"></div>
+  </div>
+
+</div>
+
+<script>
+// LOGIN
+function login(){
+  let nama = document.getElementById("nama").value;
+  localStorage.setItem("nama", nama);
+  document.getElementById("halo").innerText = "Halo " + nama + " 💜";
+}
+document.getElementById("halo").innerText = "Halo " + (localStorage.getItem("nama") || "") + " 💜";
+
+// LIKE
+let likeCount = localStorage.getItem("like") || 0;
+document.getElementById("jumlahLike").innerText = likeCount + " Likes";
+
+function like(){
+  likeCount++;
+  localStorage.setItem("like", likeCount);
+  document.getElementById("jumlahLike").innerText = likeCount + " Likes";
+}
+
+// BOOKMARK
+function bookmark(){
+  localStorage.setItem("bookmark", "Ebook 5 sudah dibookmark");
+  document.getElementById("statusBookmark").innerText = "✅ Disimpan!";
+}
+
+// KOMEN
+function tampil(){
+  let data = JSON.parse(localStorage.getItem("komen") || "[]");
+  let html = "";
+  data.forEach(k => {
+    html += "<div class='comment'><b>"+k.nama+"</b><br>"+k.isi+"</div>";
+  });
+  document.getElementById("listKomen").innerHTML = html;
+}
+
+function kirim(){
+  let isi = document.getElementById("komen").value;
+  let nama = localStorage.getItem("nama") || "Anonim";
+
+  let data = JSON.parse(localStorage.getItem("komen") || "[]");
+  data.push({nama:nama, isi:isi});
+  localStorage.setItem("komen", JSON.stringify(data));
+
+  document.getElementById("komen").value="";
+  tampil();
+}
+
+tampil();
+</script>
+
+</body>
+</html>
