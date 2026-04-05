@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dunia Karya Mbak ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f3e5f5;
+      margin: 0;
+    }
+
+    header {
+      background: purple;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    nav {
+      background: #e1bee7;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav input {
+      padding: 8px;
+      width: 60%;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .box {
+      background: white;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    .btn {
+      background: purple;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .ebook {
+      display: none;
+      background: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      padding: 20px;
+    }
+
+    .comment-box textarea {
+      width: 100%;
+      height: 60px;
+      margin-top: 10px;
+    }
+
+    .comment {
+      background: #eee;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+🌟 Dunia Karya Mbak ✨ 🌟
+</header>
+
+<nav>
+  <input type="text" id="search" placeholder="Cari ebook..." onkeyup="cari()">
+</nav>
+
+<div id="listEbook">
+
+  <div class="box ebook-item">
+    <h3>📘 50 Ide Jualan</h3>
+    <button class="btn" onclick="buka('buku1')">Baca</button>
+  </div>
+
+  <!-- Tambah ebook di sini nanti -->
+
+</div>
+
+<!-- EBOOK VIEW -->
+<div id="buku1" class="ebook">
+  <h2>📘 50 Ide Jualan</h2>
+
+  <p>Halaman 1:  
+  Ini adalah isi ebook Mbak 💜  
+  Nanti bisa panjang banget sampai banyak halaman...</p>
+
+  <p>Halaman 2:  
+  Isi lanjutan ebook...</p>
+
+  <button class="btn" onclick="tutup('buku1')">Tutup</button>
+
+  <!-- KOMENTAR -->
+  <div class="comment-box">
+    <h3>Komentar 💬</h3>
+    <textarea id="inputKomentar"></textarea>
+    <button onclick="tambahKomentar()">Kirim</button>
+
+    <div id="daftarKomentar"></div>
+  </div>
+
+</div>
+
+<script>
+function buka(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function tutup(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+function cari() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let items = document.getElementsByClassName("ebook-item");
+
+  for (let i = 0; i < items.length; i++) {
+    let text = items[i].innerText.toLowerCase();
+    items[i].style.display = text.includes(input) ? "" : "none";
+  }
+}
+
+function tambahKomentar() {
+  let input = document.getElementById("inputKomentar").value;
+  let daftar = document.getElementById("daftarKomentar");
+
+  if(input !== "") {
+    let div = document.createElement("div");
+    div.className = "comment";
+    div.innerText = input;
+    daftar.appendChild(div);
+  }
+}
+</script>
+
+</body>
+</html>
