@@ -1,79 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Buku Besar Mbak 💜</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buku Besar Mbak 💜</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(to bottom, #f3d5f5, #ffffff);
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to bottom, #e6ccff, #ffffff);
+}
 
-    header {
-      background: purple;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 22px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
+/* HEADER */
+header {
+  background: linear-gradient(to right, purple, violet);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 
-    .container {
-      padding: 20px;
-    }
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
 
-    .ebook {
-      background: white;
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+/* BOX UTAMA */
+.box {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
 
-    .ebook:hover {
-      transform: scale(1.02);
-    }
+/* JUDUL */
+h1 {
+  color: purple;
+}
 
-    .title {
-      font-size: 18px;
-      color: purple;
-      font-weight: bold;
-    }
+/* LINK EBOOK */
+.ebook-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+}
 
-    .desc {
-      font-size: 14px;
-      color: #555;
-      margin-top: 5px;
-    }
+.ebook-link:hover {
+  color: violet;
+}
 
-    .btn {
-      margin-top: 10px;
-      display: inline-block;
-      background: purple;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+/* DESKRIPSI */
+.desc {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  color: #555;
+}
+</style>
 
-    .btn:hover {
-      background: #6a1b9a;
-    }
-
-    .back {
-      margin-top: 30px;
-      display: block;
-      text-align: center;
-      color: purple;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
 </head>
 
 <body>
@@ -84,42 +74,31 @@
 
 <div class="container">
 
-  <!-- Ebook 1 -->
-  <div class="ebook">
-    <div class="title">📘 Ebook 1 — 50 Ide Jualan</div>
-    <div class="desc">Berisi 50 ide jualan dari rumah dengan modal kecil.</div>
-    <a href="ebook1.html" class="btn">Baca</a>
-  </div>
+<div class="box">
+<h1>📘 Buku Besar Bisnis Cilik 💜</h1>
 
-  <!-- Ebook 2 -->
-  <div class="ebook">
-    <div class="title">📘 Ebook 2 — Cara Biar Laku</div>
-    <div class="desc">Tips supaya jualan cepat laku dan banyak pembeli.</div>
-    <a href="ebook2.html" class="btn">Baca</a>
-  </div>
+<p>Halo 😊 Buku ini adalah kumpulan 5 ebook karya Mbak untuk belajar jualan dari nol sampai sukses.</p>
 
-  <!-- Ebook 3 -->
-  <div class="ebook">
-    <div class="title">📘 Ebook 3 — Ngatur Uang</div>
-    <div class="desc">Belajar mengatur uang dan menabung dari hasil jualan.</div>
-    <a href="ebook3.html" class="btn">Baca</a>
-  </div>
+<p>Semoga buku ini bisa membantu Mbak untuk terus belajar dan berkembang 💜</p>
 
-  <!-- Ebook 4 -->
-  <div class="ebook">
-    <div class="title">📘 Ebook 4 — Branding</div>
-    <div class="desc">Cara bikin jualan lebih menarik dan beda dari yang lain.</div>
-    <a href="ebook4.html" class="btn">Baca</a>
-  </div>
+<h2>📚 Daftar Ebook</h2>
 
-  <!-- Ebook 5 -->
-  <div class="ebook">
-    <div class="title">📘 Ebook 5 — Level Sultan</div>
-    <div class="desc">Cara mengembangkan usaha jadi lebih besar dan sukses.</div>
-    <a href="ebook5.html" class="btn">Baca</a>
-  </div>
+<a href="ebook1.html" class="ebook-link">📘 Ebook 1 — 50 Ide Jualan</a>
+<div class="desc">Berisi 50 ide jualan dari rumah dengan modal kecil.</div>
 
-  <a href="index.html" class="back">⬅ Kembali ke Home</a>
+<a href="ebook2.html" class="ebook-link">📘 Ebook 2 — Cara Biar Laku</a>
+<div class="desc">Cara supaya jualan cepat laku dan banyak pembeli.</div>
+
+<a href="ebook3.html" class="ebook-link">📘 Ebook 3 — Ngatur Uang</a>
+<div class="desc">Belajar mengatur uang dan menabung dari hasil jualan.</div>
+
+<a href="ebook4.html" class="ebook-link">📘 Ebook 4 — Branding</a>
+<div class="desc">Belajar bikin jualan lebih menarik dan beda.</div>
+
+<a href="ebook5.html" class="ebook-link">📘 Ebook 5 — Level Sultan</a>
+<div class="desc">Belajar mengembangkan usaha jadi lebih besar.</div>
+
+</div>
 
 </div>
 
