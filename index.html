@@ -6,175 +6,87 @@
 
   <style>
     body {
-      font-family: Arial;
-      background: linear-gradient(to right, #e1bee7, #f3e5f5);
       margin: 0;
+      font-family: Arial;
+      background: linear-gradient(to bottom, #e1bee7, #ffffff);
+      text-align: center;
     }
 
-    header {
-      background: linear-gradient(to right, purple, #ab47bc);
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 28px;
+    .container {
+      padding: 40px 20px;
+    }
+
+    .title {
+      font-size: 32px;
+      color: purple;
       font-weight: bold;
     }
 
-    nav {
-      padding: 10px;
-      text-align: center;
+    .subtitle {
+      margin-top: 10px;
+      color: #555;
+      font-size: 16px;
     }
 
-    nav input {
-      padding: 10px;
-      width: 70%;
-      border-radius: 20px;
-      border: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    .box {
+    .card {
+      margin-top: 40px;
       background: white;
-      margin: 15px;
-      padding: 15px;
+      padding: 25px;
       border-radius: 20px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .box:hover {
-      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
 
     .btn {
-      background: linear-gradient(to right, purple, #ab47bc);
+      margin-top: 20px;
+      background: purple;
       color: white;
-      padding: 10px 15px;
-      border: none;
+      padding: 12px 25px;
       border-radius: 15px;
-      cursor: pointer;
-      margin-top: 10px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      transition: 0.3s;
     }
 
-    .ebook {
-      display: none;
-      background: white;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      padding: 20px;
+    .btn:hover {
+      background: #6a1b9a;
+      transform: scale(1.05);
     }
 
-    .comment-box input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 10px;
-    }
-
-    .comment-box textarea {
-      width: 100%;
-      height: 60px;
-      margin-top: 10px;
-    }
-
-    .comment {
-      background: #f3e5f5;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 10px;
+    .emoji {
+      font-size: 50px;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-🌟 Dunia Karya Mbak ✨ 🌟
-</header>
+<div class="container">
 
-<nav>
-  <input type="text" id="search" placeholder="Cari ebook..." onkeyup="cari()">
-</nav>
-<div style="background: white; margin: 20px; padding: 20px; border-radius: 15px;">
-  <h3>📘 Buku Besar Bisnis Cilik</h3>
-  <p>Belajar jualan dari nol sampai level sultan 💜</p>
+  <div class="emoji">🌟📚💜</div>
 
-  <a href="bukubesar.html">
-    <button style="background: purple; color: white; padding: 10px 20px; border: none; border-radius: 10px;">
-      Baca
-    </button>
-  </a>
-</div>
-<div id="listEbook"
-<div id="listEbook">
+  <div class="title">
+    Dunia Karya Mbak ✨
+  </div>
 
-  <div class="ebook">
+  <div class="subtitle">
+    Tempat kumpulan ebook karya Mbak 💜<br>
+    Belajar jualan dari nol sampai sukses 🚀
+  </div>
+
+  <div class="card">
     <h2>📘 Buku Besar Bisnis Cilik</h2>
-    <p>Belajar Jualan dari Nol Sampai Level Sultan 💜</p>
+    <p>
+      Berisi 5 ebook lengkap dari ide jualan sampai level sultan 💰🔥
+    </p>
 
-    <a href="bukubesar.html">
-      <button class="btn">Baca</button>
+    <a href="bukubesar.html" class="btn">
+      📖 Buka Buku Besar
     </a>
   </div>
 
-
 </div>
-
-</div>
-
-<div id="buku1" class="ebook">
-  <h2>📘 50 Ide Jualan</h2>
-
-  <p>Ini isi ebook Mbak 💜✨</p>
-
-  <button class="btn" onclick="tutup('buku1')">Tutup</button>
-
-  <div class="comment-box">
-    <h3>Komentar 💬</h3>
-
-    <input type="text" id="nama" placeholder="Nama kamu">
-    <textarea id="inputKomentar" placeholder="Tulis komentar..."></textarea>
-    <button class="btn" onclick="tambahKomentar()">Kirim</button>
-
-    <div id="daftarKomentar"></div>
-  </div>
-</div>
-
-<script>
-function buka(id) {
-  document.getElementById(id).style.display = "block";
-}
-
-function tutup(id) {
-  document.getElementById(id).style.display = "none";
-}
-
-function cari() {
-  let input = document.getElementById("search").value.toLowerCase();
-  let items = document.getElementsByClassName("ebook-item");
-
-  for (let i = 0; i < items.length; i++) {
-    let text = items[i].innerText.toLowerCase();
-    items[i].style.display = text.includes(input) ? "" : "none";
-  }
-}
-
-function tambahKomentar() {
-  let nama = document.getElementById("nama").value;
-  let isi = document.getElementById("inputKomentar").value;
-  let daftar = document.getElementById("daftarKomentar");
-
-  if(nama !== "" && isi !== "") {
-    let div = document.createElement("div");
-    div.className = "comment";
-    div.innerText = nama + ": " + isi;
-    daftar.appendChild(div);
-  }
-}
-</script>
 
 </body>
 </html>
